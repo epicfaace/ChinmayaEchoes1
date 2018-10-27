@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import AppStackNavigator from './AppStackNavigator';
 import {Provider} from 'react-redux';
 import {createStore,applyMiddleware} from 'redux';
+import ReduxPromise from 'redux-promise';
 import reducers from './src/reducers';
 import thunk from 'redux-thunk';
 

@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {Image,ScrollView,TouchableOpacity,Button,View,Text,FlatList,StyleSheet,Platform,Animated,Easing} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import {connect} from 'react-redux';
 import LogOutHeader from '../containers/LogOutHeader';
 
 export default class TweetDetail extends Component{
@@ -102,6 +103,6 @@ chevron:{
 },
 mainContainer:{
   marginBottom:35,
-  marginTop:Platform.OS === 'ios' ?20:0,
+  marginTop:Platform.OS === 'ios' ?30:0,
 }
 });

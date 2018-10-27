@@ -28,6 +28,7 @@ const StackNav = createMaterialBottomTabNavigator(
   {
     initialRouteName:'SignIn',
     activeTintColor:'white',
+    shifting:true,
   }
 );
 

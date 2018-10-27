@@ -1,1 +1,1 @@
-# ChinmayaEchoes1
+# ChinmayaTweets

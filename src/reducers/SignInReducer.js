@@ -19,7 +19,6 @@ const SignInReducer=(state = initialState, action) => {
         user: action.user,
       }
     case 'LOG_IN_FAILURE':
-      console.log('failed')
       return {
         ...state,
         isAuthenticating: false,

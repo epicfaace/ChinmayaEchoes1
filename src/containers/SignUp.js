@@ -37,13 +37,7 @@ class SignUp extends Component {
 
   confirm=()=> {
     const { authCode, username } = this.state
-    this.props.confirmUserSignUp(username, authCode);
-    this.props.navigation.navigate('SignIn')
-  }
-
-  resendOtp=()=>{
-    const { authCode, username } = this.state
-    this.props.confirmUserSignUp(username, authCode);
+    this.props.confirmUserSignUp(username, authCode)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -56,12 +50,12 @@ class SignUp extends Component {
 
   onPasswordPress=()=>{
     var err='Minimum length of password should be 8.It should contain at atleast one Uppercase and one LowerCase.It should also contain atleast one special character and one number';
-    Alert.alert(JSON.stringify(err));
+    alert(JSON.stringify(err));
   }
 
   onUsernamePress=()=>{
     var err='There should be no space in Username';
-    Alert.alert(JSON.stringify(err));
+    alert(JSON.stringify(err));
   }
 
   render() {
@@ -84,7 +78,7 @@ class SignUp extends Component {
                 style={styles.input}
               />
               <TouchableOpacity style={styles.starIcon} onPress={this.onUsernamePress}>
-                <FontAwesome name={'bullseye'} size={20} color={'#E57373'}/>
+                <FontAwesome name={'bullseye'} size={15} color={'#E57373'}/>
               </TouchableOpacity>
             </View>
             <View style={styles.passwordInput}>
@@ -95,7 +89,7 @@ class SignUp extends Component {
                 secureTextEntry={true}
               />
               <TouchableOpacity style={styles.starIcon} onPress={this.onPasswordPress}>
-                <FontAwesome name={'bullseye'} size={20} color={'#E57373'}/>
+                <FontAwesome name={'bullseye'} size={15} color={'#E57373'}/>
               </TouchableOpacity>
             </View>
             <TextInput
@@ -129,13 +123,6 @@ class SignUp extends Component {
                   <Button
                     title='Confirm'
                     onPress={()=>this.confirm()}
-                    isLoading={isAuthenticating}
-                  />
-                </View>
-                <View style={{marginBottom:10}}>
-                  <Button
-                    title='Resend Otp'
-                    onPress={()=>this.resendOtp()}
                     isLoading={isAuthenticating}
                   />
                 </View>
@@ -200,9 +187,8 @@ const styles = StyleSheet.create({
   },
   starIcon:{
     position:'absolute',
-    right:20,
-    padding:20,
-    top:5,
+    right:40,
+    top:25,
   },
   button:{
     padding:10,
